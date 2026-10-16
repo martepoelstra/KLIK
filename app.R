@@ -303,7 +303,7 @@ server <- function(input, output, session) {
       bottom: 90px;
       left: 20px;
       background-color: #f0f0f0;
-      padding: 10px;
+      padding: 5px;
       border-radius: 8px;
       font-size: 20px;
     ",
