@@ -178,6 +178,8 @@ server <- function(input, output, session) {
       tijd = character(),
       leerlinggedrag = numeric(),
       leraargedrag = numeric(),
+      leraar_regie = numeric(),
+      leraar_nabijheid = numeric(),
       opmerkingen = character(),
       achtergrondinfo = character(),
       stringsAsFactors = FALSE
@@ -214,6 +216,8 @@ server <- function(input, output, session) {
         tijd = NA_character_,
         leerlinggedrag = NA,
         leraargedrag = NA,
+        leraar_regie = NA,
+        leraar_nabijheid = NA,
         opmerkingen = NA_character_,
         achtergrondinfo = NA_character_,
         stringsAsFactors = FALSE
@@ -269,6 +273,11 @@ server <- function(input, output, session) {
       df$tijd[row] <- format_timer(timer_sec())
       df$leerlinggedrag[row] <- g
       df$leraargedrag[row] <- i
+      
+      # Recoding: eerste cijfer = regie, tweede cijfer = nabijheid
+      df$leraar_regie[row] <- as.numeric(substr(as.character(i), 1, 1))
+      df$leraar_nabijheid[row] <- as.numeric(substr(as.character(i), 2, 2))
+      
       data(df)
       
       # Maak een CSV bestand aan met de geregistreerde data.
