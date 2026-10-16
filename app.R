@@ -141,9 +141,9 @@ server <- function(input, output, session) {
     hide("start") # Zodra op de startknop wordt geklikt, verdwijnt deze knop en begint de timer.
     
     # De regel hieronder zorgt ervoor dat de data onder een vaste bestandsnaam wordt opgeslagen,
-    # in het format "observaties_dag-maand-jaar-uur-minuut".
+    # in het format "observatie_dag-maand-jaar-uur-minuut".
     file(
-      paste0("observaties_", format(Sys.time(), "%d-%m-%Y_%H-%M"), ".csv")
+      paste0("observatie_", format(Sys.time(), "%d-%m-%Y_%H-%M"), ".csv")
     )
   })
   
@@ -159,7 +159,7 @@ server <- function(input, output, session) {
     minutes <- floor(timer_sec() / 60)
     seconds <- timer_sec() %% 60
     span(sprintf("%02d:%02d", minutes, seconds),
-         style="font-weight:bold; font-size:52px; position:fixed; bottom:20px; left:20px;")
+         style="font-weight:bold; font-size:62px; position:fixed; bottom:20px; left:20px;")
   })
   
   format_timer <- function(sec) {
@@ -300,7 +300,7 @@ server <- function(input, output, session) {
     tags$div(
       style = "
       position: fixed;
-      bottom: 110px;
+      bottom: 90px;
       left: 20px;
       background-color: #f0f0f0;
       padding: 10px;
