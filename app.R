@@ -159,7 +159,7 @@ server <- function(input, output, session) {
     minutes <- floor(timer_sec() / 60)
     seconds <- timer_sec() %% 60
     span(sprintf("%02d:%02d", minutes, seconds),
-         style="font-weight:bold; font-size:72px; position:fixed; bottom:20px; left:20px;")
+         style="font-weight:bold; font-size:52px; position:fixed; bottom:20px; left:20px;")
   })
   
   format_timer <- function(sec) {
