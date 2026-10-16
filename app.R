@@ -300,7 +300,7 @@ server <- function(input, output, session) {
     tags$div(
       style = "
       position: fixed;
-      bottom: 90px;
+      bottom: 100px;
       left: 20px;
       background-color: #f0f0f0;
       padding: 5px;
