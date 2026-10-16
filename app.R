@@ -21,7 +21,7 @@ ui <- fluidPage(
       
       .big-button {
       width: 100%;
-      height: 100px;
+      height: 80px;
       font-size: 20px;
       font-weight: bold;
       align-items: center !important;
